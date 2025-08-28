@@ -21,3 +21,20 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 }); // Trigger when 20% visible
 
 sections.forEach(section => observer.observe(section));
+
+(function(){
+  emailjs.init("DRH0ApN0wz2FZGg24"); // Replace with your EmailJS public key
+})();
+
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  emailjs.sendForm("service_vl8s3jh", "template_1h9qssj", this)
+    .then(function() {
+      document.getElementById("status-message").textContent = "✅ Subscription successful!";
+      document.getElementById("newsletter-form").reset();
+    }, function(error) {
+      document.getElementById("status-message").textContent = "❌ Something went wrong. Try again.";
+      console.error("EmailJS error:", error);
+    });
+});
