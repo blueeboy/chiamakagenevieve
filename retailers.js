@@ -39,18 +39,27 @@ function filterStores(country) {
 }
 
 (function(){
-    emailjs.init("DRH0ApN0wz2FZGg24"); // Replace with your EmailJS public key
-  })();
+  emailjs.init("DRH0ApN0wz2FZGg24"); // Replace with your EmailJS public key
+})();
 
-  document.getElementById("newsletter-form").addEventListener("submit", function(e) {
-    e.preventDefault();
+document.getElementById("newsletter-form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-    emailjs.sendForm("service_vl8s3jh", "template_1h9qssj", this)
-      .then(function() {
-        document.getElementById("status-message").textContent = "✅ Subscription successful!";
-        document.getElementById("newsletter-form").reset();
-      }, function(error) {
-        document.getElementById("status-message").textContent = "❌ Something went wrong. Try again.";
-        console.error("EmailJS error:", error);
-      });
-  });
+  // Send to you (admin)
+  emailjs.sendForm("service_vl8s3jh", "template_1h9qssj", this, "DRH0ApN0wz2FZGg24")
+    .then(() => {
+      document.getElementById("status-message").textContent = "✅ Subscription successful!";
+      document.getElementById("newsletter-form").reset();
+    }, (err) => {
+      document.getElementById("status-message").textContent = "❌ Something went wrong. Try again.";
+      console.error("EmailJS error:", error);
+    });
+
+  // Send auto-reply to user
+  emailjs.sendForm("service_vl8s3jh", "template_x7ggsfd", this, "DRH0ApN0wz2FZGg24")
+    .then(() => {
+      console.log("Auto-reply sent to user!");
+    }, (err) => {
+      console.error("Auto-reply error:", err);
+    });
+});
