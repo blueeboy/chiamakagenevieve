@@ -178,6 +178,10 @@ nav .dropdown:hover .fas {
   order: 2;
 }
 
+.about-text a {
+  color: #fff;
+}
+
 .italic {
   font-family: "Cormorant Upright", serif;
   font-size: 3em;
@@ -221,10 +225,11 @@ nav .dropdown:hover .fas {
 
 #newsletter-form input {
   padding: 1.2em;
-  min-width: 400px;
+  min-width: 350px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 
 #newsletter-form button {
   padding: 12px 20px;

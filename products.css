@@ -166,13 +166,17 @@
     column-gap: 1em;
   }
 
-  .books img, .journals img {
+  .books div, .journals div {
+    margin: 1em 0;
+  }
+
+  .books div img, .journals div img {
     width: 100%;
     height: auto;
-    background-color: rgb(199, 198, 198);
     border-radius: 12px;
     object-fit: cover;
-    margin-bottom: 1em;
+    background-color: #fff;
+    margin: 1em 0;
   }
 
   .books a, .journals a {
@@ -219,7 +223,7 @@
 
 #newsletter-form input {
   padding: 1.2em;
-  min-width: 400px;
+  min-width: 350px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
@@ -404,10 +408,10 @@
       }
 
       .books div, .journals div {
-        min-width: 100px;
-        height: 250px;
-        background-color: rgb(199, 198, 198);
+        min-width: 100%;
+        height: auto;
         border-radius: 12px;
+        background-color: #fff;
       }
   
     /* FOOTER */

@@ -216,10 +216,11 @@
 
 #newsletter-form input {
   padding: 1.2em;
-  min-width: 400px;
+  min-width: 350px;
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 
 #newsletter-form button {
   padding: 12px 20px;
