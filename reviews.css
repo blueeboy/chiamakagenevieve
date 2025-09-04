@@ -179,8 +179,33 @@
     gap: 2em;
   }
 
-  .top h2, .top p {
+  video {
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    margin: 2em auto;
+  }
+
+  .top h3, .top p {
     font-weight: 300;
+  }
+
+  .top img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+
+  .video {
+    padding: 3em;
+  }
+
+  .video h2 {
+    font-size: clamp(3em, 5vw, 6em);
+    color: var(--primary-color);
   }
 
   /* NEWSLETTER */
