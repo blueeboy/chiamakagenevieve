@@ -13,9 +13,8 @@
         href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="images/fav-icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="contact.css">
     <title>ABC Roadmap | by Chiamaka Genevieve</title>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="products.html">Products</a></li>
                     <li><a href="retailers.html">Retailers</a></li>
                     <li class="dropdown" style="display: flex; align-items: center;"><a href="#">Resources<i
                                 class="fas fa-chevron-down" style="margin-left: 5px;font-size: 15px;"></i></a>
@@ -38,7 +37,7 @@
                             <li><a href="faq.html">FAQs</a></li>
                         </ul>
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
                 </ul>
                 <a href="retailers.html" class="cta-btn">Shop Now</a>
                 <div class="hamburger" id="hamburger">
@@ -60,39 +59,48 @@
     </header>
 
     <main class="container">
-        <section class="products animate-section slide-up">
-            <h1>PRODUCTS</h1>
-            <h2>Books</h2>
-            <div class="books">
-                <div>
-                    <a href="retailers.html"><img src="images/abcbook.jpeg" alt=""></a>
-                    <a href="retailers.html">ABC Roadmap Book</a>
-                </div>
-            </div>
-            <h2>Journals</h2>
-            <div class="journals">
-                <div>
-                    <a href="https://catlog.shop/p/starter-pack-productivity-bundle-1756471933201-kau" target="_blank"><img src="images/starter.jpeg" alt=""></a>
-                    <a href="https://catlog.shop/p/starter-pack-productivity-bundle-1756471933201-kau" target="_blank">The starter pack productivity bundle</a>
-                </div>
-                <div>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1" target="_blank"><img src="images/thrive_black.jpeg" alt=""></a>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1" target="_blank">Thrive Journal (Black)</a>
-                </div>
-                <div>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1" target="_blank"><img src="images/thrive_pink.jpeg" alt=""></a>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1" target="_blank">Thrive Journal (Pink)</a>
-                </div>
-                <div>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1"><img src="images/thrive_green.jpeg" alt=""></a>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1">Thrive Journal (Green)</a>
-                </div>
-                <div>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1"><img src="images/thrive_yellow.jpeg" alt=""></a>
-                    <a href="https://catlog.shop/p/thrive-journal-1747751093762-fa1">Thrive Journal (Beige)</a>
+        <section class="contact animate-section slide-up">
+            <h1>CONTACT</h1>
+            <form id="contact-form">
+                <h2>GENERAL QUERIES</h2>
+                <label>
+                    Name
+                </label>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <label>
+                    Email Address
+                </label>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <label>
+                    Telephone
+                </label>
+                <input type="tel" name="tel" placeholder="Full phone number with country code" required>
+                <label>Subject</label>
+                <select name="subject" required>
+                    <option value="Media Inquiry">Media Inquiry</option>
+                    <option value="Speaking Engagement">Speaking Engagement</option>
+                    <option value="Book Feedback">Book Feedback</option>
+                    <option value="Partnership / Collaboration">Partnership / Collaboration</option>
+                    <option value="General Question">General Question</option>
+                    <option value="Help with Order">Help with Order</option>
+                </select>
+                <label>
+                    Message
+                </label>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <div class="checkbox">
+                    <input type="checkbox" name="terms" required>
+                    <span>I agree to be contacted regarding this request</span>
                 </div>
 
-            </div>
+
+
+                <!-- your other form fields go here -->
+                <button type="submit">Submit</button>
+            </form>
+
+            <!-- Status message -->
+            <p id="contact-status"></p>
         </section>
 
         <section class="newsletter">
@@ -119,8 +127,8 @@
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="products.html" class="active">Products</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html" class="active">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -151,7 +159,33 @@
             <p>&copy; 2025 Chiamaka Genevieve. All rights reserved.</p>
         </div>
     </footer>
-    <script src="products.js"></script>
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script>
+        (function () {
+            emailjs.init("FBOfLBM3D7i9D9KLM"); // Replace with your actual Public Key
+        })();
+
+        const form = document.getElementById("contact-form");
+        const contactStatus = document.getElementById("contact-status");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            contactStatus.textContent = "Sending...";
+
+            emailjs.sendForm("service_79tut5a", "template_np26cep", this, "FBOfLBM3D7i9D9KLM")
+                .then(() => {
+                    contactStatus.textContent = "✅ Message sent successfully!";
+                    form.reset();
+                }, (error) => {
+                    console.error("EmailJS Error:", error);
+                    contactStatus.textContent = "❌ Failed to send message. Please try again.";
+                });
+        });
+    </script>
+    <script src="contact.js"></script>
 </body>
 
 </html>

@@ -212,7 +212,7 @@
   .faq-answer {
     margin-top: 10px;
     font-size: 15px;
-    color: #555;
+    color: var(--primary-color);
     display: none;
   }
 
