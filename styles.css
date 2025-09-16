@@ -206,11 +206,9 @@ nav .dropdown:hover .fas {
 
 .hero-img img {
   width: 100%;
-  height: auto;
+  height: 120vh;
   border-radius: 12px;
   object-fit: cover;
-  position: relative;
-  left: 10%;
 }
 
 /* About Section */
@@ -410,6 +408,15 @@ section {
 }
 
 /* Responsive Styles */
+
+@media (max-width: 1200px) {
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }  
+}
 @media (max-width: 991px) {
   nav {
     display: flex;
@@ -446,6 +453,13 @@ section {
 
   .hero {
     padding: 0 1em;
+  }
+
+  .hero-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
   }
 
   .cta-btn {
