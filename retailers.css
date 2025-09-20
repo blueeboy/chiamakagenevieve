@@ -158,6 +158,13 @@
   .retailers h1 {
     font-size: clamp(3em, 5vw, 6em);
     color: var(--primary-color);
+    font-weight: bold;
+  background: linear-gradient(180deg, var(--primary-color), #003219);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.5;
   }
 
   .buttons {
